@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/proyectos/analizador-cpp/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contacto/</loc>
+  </url><url>
+    <loc>http://localhost:1313/proyectos/ecartilla/</loc>
+  </url><url>
+    <loc>http://localhost:1313/proyectos/generador_verificador_de_contrase%C3%B1as/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/proyectos/mapeo_solar/</loc>
+  </url><url>
+    <loc>http://localhost:1313/proyectos/meteor/</loc>
+  </url><url>
+    <loc>http://localhost:1313/proyectos/</loc>
+  </url>
+</urlset>

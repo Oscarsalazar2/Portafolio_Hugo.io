@@ -1,0 +1,13 @@
+baseURL = "http://localhost:1313/"
+languageCode = "es-mx"
+title = "Oscar Salazar Portafolio"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  name = "Oscar Salazar"
+  role = "Estudiante de Ing. en Sistemas"
+  location = "Matamoros, Tamaulipas, MX"
+  email = "Oskar.salazar2016@gmail.com"
+  github = "https://github.com/OscarSalazar2"
+  linkedin = "https://www.linkedin.com/in/oscar-salazar-8153aa345/"
+  website = "https://tu-dominio.com"

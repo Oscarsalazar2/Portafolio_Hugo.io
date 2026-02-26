@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="card">
+  <div class="btnrow" style="margin-bottom: 12px">
+    {{ if eq .Section "proyectos" }}
+    <a class="btn" href="/">← Regresar al inicio</a>
+    {{ else }}
+    <a class="btn" href="/">← Regresar al inicio</a>
+    {{ end }}
+  </div>
+  <h1 class="h1" style="font-size: 30px">{{ .Title }}</h1>
+  {{ if .Params.stack }}
+  <div class="badge">{{ .Params.stack }}</div>
+  {{ end }}
+  <div class="section">{{ .Content }}</div>
+</article>
+{{ end }}

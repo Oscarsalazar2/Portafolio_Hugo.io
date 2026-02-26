@@ -1,0 +1,106 @@
+{{ define "main" }}
+
+<section class="hero grid grid-2" id="sobre-mi">
+  <div>
+    <h1 class="h1">Hola, soy {{ site.Params.name }}.</h1>
+    <p class="p">
+      Desarrollo soluciones web con Laravel, React y PostgreSQL, enfocadas en
+      resolver necesidades reales. Trabajo desde el análisis del problema hasta
+      la implementación, cuidando rendimiento, estructura y experiencia de
+      usuario.
+    </p>
+
+    <div class="btnrow">
+      <a class="btn primary" href="/#proyectos">Ver proyectos</a>
+      <a class="btn" href="/contacto/">Contactarme</a>
+      <a class="btn" href="{{ site.Params.github }}">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display: flex; gap: 14px; align-items: center">
+      <img src="/img/avatar.svg" alt="avatar" width="74" height="74" />
+      <div>
+        <div style="font-weight: 800; font-size: 18px">
+          {{ site.Params.role }}
+        </div>
+        <div class="small">{{ site.Params.location }}</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="h2">Sobre mí</h2>
+      <p class="p">
+        Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnologico de Matamoros.
+        <br>
+        Me interesa construir software útil y bien diseñado, combinando backend,
+        base de datos y una interfaz clara. He participado en proyectos de
+        desarrollo web, IoT y redes, aportando en etapas de diseño, desarrollo y
+        validación.
+      </p>
+      <div class="tags">
+        <span class="tag color-backend">Laravel</span><span class="tag color-frontend">React</span
+        ><span class="tag color-backend">PostgreSQL</span> <span class="tag color-iot">IoT</span
+        ><span class="tag color-network">CCNA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proyectos">
+  <h2 class="h2">Proyectos destacados</h2>
+  <div class="proj">
+    {{ range (where site.RegularPages "Section" "proyectos") }}
+    <a class="card" href="{{ .RelPermalink }}">
+      <div style="display: flex; justify-content: space-between; gap: 12px">
+        <div style="font-weight: 800">{{ .Title }}</div>
+        <span class="badge">{{ .Params.stack | default "Proyecto" }}</span>
+      </div>
+      <p class="p">{{ .Summary }}</p>
+      <div class="tags">
+        {{ range .Params.tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section" id="habilidades">
+  <h2 class="h2">Habilidades</h2>
+  <div class="proj">
+    <div class="card">
+      <div style="font-weight: 800">Frontend</div>
+      <p class="p">
+        React, Tailwind, interfaces responsivas y componentes reutilizables.
+      </p>
+      <div class="tags">
+        <span class="tag">React</span><span class="tag">Tailwind</span
+        ><span class="tag">Vite</span>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-weight: 800">Backend</div>
+      <p class="p">
+        Laravel, APIs REST, autenticación por roles y manejo de datos.
+      </p>
+      <div class="tags">
+        <span class="tag color-backend">Laravel</span><span class="tag color-backend">PostgreSQL</span
+        ><span class="tag color-backend">REST</span>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-weight: 800">Redes</div>
+      <p class="p">
+        VLANs, OSPF, troubleshooting y prácticas de Cisco Packet Tracer.
+      </p>
+      <div class="tags">
+        <span class="tag color-network">OSPF</span><span class="tag color-network">VLAN</span
+        ><span class="tag color-network">CCNA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
