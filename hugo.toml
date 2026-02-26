@@ -1,7 +1,8 @@
-baseURL = "http://localhost:1313/"
+baseURL = "/"
 languageCode = "es-mx"
 title = "Oscar Salazar Portafolio"
 disableKinds = ["taxonomy", "term"]
+relativeURLs = true
 
 [params]
   name = "Oscar Salazar"
